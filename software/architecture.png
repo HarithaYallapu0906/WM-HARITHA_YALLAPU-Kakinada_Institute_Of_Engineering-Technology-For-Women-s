@@ -1,0 +1,30 @@
+         ┌───────────────────────────────┐
+         │       Web Dashboard           │
+         │  (React JS + Visualization)  │
+         └─────────────┬────────────────┘
+                       │ REST API / WebSocket
+                       ▼
+         ┌───────────────────────────────┐
+         │        Backend Server         │
+         │  (Python / Flask / Database) │
+         │ - Receive bin data            │
+         │ - Process & filter data      │
+         │ - Store historical data      │
+         └─────────────┬────────────────┘
+                       │
+                       ▼
+         ┌───────────────────────────────┐
+         │     Communication Layer       │
+         │ (ESP8266 / GSM / LoRa)       │
+         │ - Send processed data         │
+         │ - Retry / buffer if failure  │
+         └─────────────┬────────────────┘
+                       │
+                       ▼
+         ┌───────────────────────────────┐
+         │ Embedded Device Layer         │
+         │ (Arduino + Ultrasonic Sensor)│
+         │ - Measure bin level          │
+         │ - Threshold logic            │
+         │ - Filter false readings      │
+         └───────────────────────────────┘
